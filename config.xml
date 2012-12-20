@@ -3,11 +3,11 @@
         xmlns:gap	= "http://phonegap.com/ns/1.0"
 		id			= "com.bigpaperstudios.marks"
 		version		= "0.0.1">
-	<name>Marks</name>
-	
-	<author email="big-paper@hotmail.com">
-	Jannis Portmann, Big Paper Stusios
-	</author>
+		
+	<preference name="phonegap-version" value="2.1.0" />
+    <preference name="orientation"      value="default" />
+    <preference name="target-device"    value="universal" />
+    <preference name="fullscreen"       value="false" />
 	
 	
 	
