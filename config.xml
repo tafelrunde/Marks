@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns 		= "http://www.w3.org/ns/widgets"
+        xmlns:gap	= "http://phonegap.com/ns/1.0"
+		id			= "com.bigpaperstudios.marks"
+		version		= "0.0.1">
+	<name>Marks</name>
+	
+	<author email="big-paper@hotmail.com">
+	Jannis Portmann, Big Paper Stusios
+	</author>
+	
+	
+	
