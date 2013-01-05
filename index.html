@@ -3,8 +3,35 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Marks</title>
+
+<script type="text/javascript" charset="utf-8" src="phonegap-1.2.0.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady() {
+        var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
+        db.transaction(populateDB, errorCB, successCB);
+    }
+
+    function populateDB(tx) {
+         tx.executeSql('DROP TABLE IF EXISTS DEMO');
+         tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+         tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+         tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+    }
+
+    function errorCB(err) {
+        alert("Error processing SQL: "+err);
+    }
+
+    function successCB() {
+        alert("success!");
+    }
+</script>
+
 <link href="main.css" rel="stylesheet" type="text/css" />
-<link href="config.xml" />
+<link href="file:///C|/Users/Development/Desktop/phonegap/Noten App/config.xml" />
 </head>
 
 <body>
@@ -26,6 +53,9 @@
     <p />
     <button value="submit">Confirm</button>
 	
+
+    
+    
 </div>
 </body>
 </html>
